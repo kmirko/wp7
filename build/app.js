@@ -345,12 +345,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(12), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: \"Open Sans\", sans-serif;\n  background-color: #fff;\n  color: #333;\n  line-height: 1.6;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  color: #333;\n  text-decoration: none;\n}\n\nh1,\nh2 {\n  font-weight: 300;\n  line-height: 1.2;\n}\n\np {\n  margin: 10px 0;\n}\n\nimg {\n  width: 100%;\n}\n\n.text-primary {\n  color: #28a745;\n}\n\n.text-secondary {\n  color: #0284d0;\n}\n\n.btn {\n  display: inline-block;\n  cursor: pointer;\n  padding: 10px 30px;\n  background-color: #28a745;\n  color: #fff;\n  border-radius: 5px;\n  border: none;\n  margin: 5px 0;\n}\n\n.btn:hover {\n  opacity: 0.9;\n}\n\n.btn-primary {\n  background-color: #28a745;\n  color: #fff;\n}\n\n.navbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #333;\n  color: #fff;\n  opacity: 0.8;\n  width: 100%;\n  height: 70px;\n  position: fixed;\n  top: 0;\n  padding: 0 30px;\n  transition: 0.5s ease-in;\n}\n\n.navbar ul {\n  display: flex;\n}\n\n.navbar ul li a {\n  color: #fff;\n  padding: 10px 20px;\n  margin: 0 8px;\n}\n\n.navbar ul li a:hover {\n  border-bottom: 2px solid #28a745;\n}\n\n.navbar .logo {\n  font-weight: 400;\n}\n\n.hero {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat center center/cover;\n  height: 100vh;\n  color: #fff;\n  position: relative;\n}\n\n.hero .content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  height: 100%;\n  padding: 0 20px;\n}\n\n.hero .content h1 {\n  font-size: 55px;\n}\n\n.hero .content p {\n  font-size: 23px;\n  padding: 20px 0 30px;\n  max-width: 600px;\n}\n\n.hero::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.4);\n}\n\n.hero * {\n  z-index: 10;\n}\n\n.cases {\n  padding: 70px 0;\n  max-width: 800px;\n  margin: 60px auto;\n  height: 1500px;\n}\n\n.cases1 {\n  padding: 70px 0;\n  background-color: rgb(175, 156, 249);\n  margin: 60px auto;\n  height: 1500px;\n  max-width: 800px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -472,6 +478,46 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 11 */
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  }
+
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+/* 12 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "slika2.jpg";
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -499,6 +545,9 @@ module.exports = function (cssWithMappingToString) {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -524,6 +573,18 @@ module.exports = function (cssWithMappingToString) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -540,6 +601,52 @@ module.exports = function (cssWithMappingToString) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			0: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -547,7 +654,50 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
-console.log('Radi ovo');
+var navbar = document.getElementById('navbar');
+var scrolled = false;
+
+window.onscroll = function () {
+  if (window.pageYOffset > 100) {
+    navbar.classList.remove('top');
+
+    if (!scrolled) {
+      navbar.style.transform = 'translateY(-70px)';
+    }
+
+    setTimeout(function () {
+      navbar.style.transform = 'translateY(0)';
+      scrolled = true;
+    }, 500);
+  } else {
+    navbar.classList.add('top');
+    scrolled = false;
+  }
+}; // const home1 = document.querySelector('#home');
+// const section1 = document.querySelector('.cases');
+// const section2 = document.querySelector('.cases1');
+// home1.addEventListener('click', function (e) {
+//   const s1coords = section1.getBoundingClientRect();
+//   section1.scrollIntoView({ behavior: 'smooth' });
+//   section2.scrollIntoView({ behavior: 'smooth' });
+// });
+
+
+var btn1 = document.querySelector('#btn1');
+var btn2 = document.querySelector('#btn2');
+var btn3 = document.querySelector('#btn3');
+var section1 = document.querySelector('.cases');
+var section2 = document.querySelector('.cases1');
+btn1.addEventListener('click', function () {
+  section1.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+btn2.addEventListener('click', function () {
+  section2.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
 })();
 
 /******/ })()
