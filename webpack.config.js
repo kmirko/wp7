@@ -5,13 +5,13 @@ module.exports = {
   mode: 'none',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
     clean: true,
     assetModuleFilename: '[name][ext]',
   },
   devServer: {
-    static: path.join(__dirname, 'build'),
+    static: path.join(__dirname, 'dist'),
     port: 9000,
     open: true,
   },
